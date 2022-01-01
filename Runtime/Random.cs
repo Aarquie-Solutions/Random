@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace AarquieSolutions.Utility.Random
+namespace AarquieSolutions.Utility
 {
     public static class Random
     {
@@ -37,6 +36,22 @@ namespace AarquieSolutions.Utility.Random
 				_ => item3
 			};
 		}
+
+		/// <summary>
+		/// Return a number between a range, this function calls UnityEngine.Random.Range
+		/// </summary>
+		/// <param name="min">Starting range, included</param>
+		/// <param name="max">Ending range, not included</param>
+		/// <returns></returns>
+		public static int Int(int min, int max) => UnityEngine.Random.Range(min, max);
+		
+		/// <summary>
+		/// Return a number between a range, this function calls UnityEngine.Random.Range
+		/// </summary>
+		/// <param name="min">Starting range, included</param>
+		/// <param name="max">Ending range, included</param>
+		/// <returns></returns>
+		public static float Float(float min, float max) => UnityEngine.Random.Range(min, max);
 
 		/// <summary>
 		/// Return random item from array.

@@ -1,6 +1,6 @@
 {
     "name": "aarquiesolutions.randomutility",
-    "rootNamespace": "AarquieSolutions.Utility.Random",
+    "rootNamespace": "AarquieSolutions.Utility",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
