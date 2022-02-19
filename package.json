@@ -1,6 +1,6 @@
 {
-  "name": "com.aarquiesolutions.randomutility",
-  "displayName": "Random Utility",
+  "name": "com.aarquiesolutions.randomextensionutility",
+  "displayName": "Random Extension Utility",
   "version": "1.0.0",
   "description": "Utility for random generation."
 }

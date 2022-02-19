@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AarquieSolutions.Utility
 {
-    public static class Random
+    public static class RandomExtension
     {
 		/// <summary>
 		/// Return random bool value.
@@ -36,23 +36,7 @@ namespace AarquieSolutions.Utility
 				_ => item3
 			};
 		}
-
-		/// <summary>
-		/// Return a number between a range, this function calls UnityEngine.Random.Range
-		/// </summary>
-		/// <param name="min">Starting range, included</param>
-		/// <param name="max">Ending range, not included</param>
-		/// <returns></returns>
-		public static int Int(int min, int max) => UnityEngine.Random.Range(min, max);
 		
-		/// <summary>
-		/// Return a number between a range, this function calls UnityEngine.Random.Range
-		/// </summary>
-		/// <param name="min">Starting range, included</param>
-		/// <param name="max">Ending range, included</param>
-		/// <returns></returns>
-		public static float Float(float min, float max) => UnityEngine.Random.Range(min, max);
-
 		/// <summary>
 		/// Return random item from array.
 		/// </summary>
@@ -74,7 +58,7 @@ namespace AarquieSolutions.Utility
 		/// </summary>
 		public static T Enum<T>()
 		{
-			var values = System.Enum.GetValues(typeof(T));
+			Array values = System.Enum.GetValues(typeof(T));
 			return (T)values.GetValue(UnityEngine.Random.Range(0, values.Length));
 		}
 
